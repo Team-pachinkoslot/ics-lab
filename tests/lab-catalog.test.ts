@@ -23,6 +23,16 @@ describe("フェーズ1カタログの要件", () => {
     }
   });
 
+  it("各演習は初級・中級・上級の3段階を持つ", () => {
+    for (const lab of labCatalog) {
+      expect(lab.levels).toHaveLength(3);
+      expect(lab.levels.map(({ difficulty }) => difficulty)).toEqual(["beginner", "intermediate", "advanced"]);
+      expect(lab.levels.every((level) => level.description.length > 20)).toBe(true);
+      expect(lab.levels.every((level) => level.objectives.length > 0)).toBe(true);
+      expect(lab.levels.every((level) => level.assets.length > 0)).toBe(true);
+    }
+  });
+
   it("取得関数は共通カタログを参照し、番号を順に付ける", () => {
     expect(getLabs()).toBe(labCatalog);
     labCatalog.forEach((lab, index) => {

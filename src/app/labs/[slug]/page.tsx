@@ -32,6 +32,17 @@ export default async function LabDetailPage({ params }: Props) {
           <section className="panel"><h2>シナリオ概要</h2><p>{lab.description}</p></section>
           <section className="panel"><h2>学習目標</h2><ol className="objective-list">{lab.objectives.map((objective, index) => <li key={objective}><span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>{objective}</li>)}</ol></section>
           <section className="panel"><h2>対象設備・情報</h2><p className="muted">将来の模擬環境で扱う予定の設備・情報です。</p><ul className="asset-list">{lab.assets.map((asset) => <li key={asset}>{asset}</li>)}</ul></section>
+          <section className="panel"><h2>難易度別の演習ステップ</h2>
+            <div className="level-list">{lab.levels.map((level, index) => (
+              <article key={`${lab.slug}-${level.difficulty}`} className={`level-card level-card-${level.difficulty}`}>
+                <div className="level-header"><span className="status-badge">{difficultyLabels[level.difficulty]}</span><span>{level.estimatedMinutes}分</span></div>
+                <h3>{String(index + 1).padStart(2, "0")} {level.title}</h3>
+                <p>{level.description}</p>
+                <ul className="objective-list compact">{level.objectives.map((objective, objectiveIndex) => <li key={objective}><span aria-hidden="true">{String(objectiveIndex + 1).padStart(2, "0")}</span>{objective}</li>)}</ul>
+                <ul className="asset-list compact">{level.assets.map((asset) => <li key={asset}>{asset}</li>)}</ul>
+              </article>
+            ))}</div>
+          </section>
         </div>
         <aside className="detail-aside">
           <section className="panel start-panel"><p className="eyebrow">演習環境</p><h2>演習は準備中です</h2><p id="runtime-explanation">VM接続は次フェーズで対応します。</p><button type="button" disabled aria-describedby="runtime-explanation">演習開始（準備中）</button><p className="small-note">現在はシナリオの内容のみ確認できます。</p></section>

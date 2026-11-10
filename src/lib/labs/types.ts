@@ -6,6 +6,15 @@ export type LabSlug =
 export type LabDifficulty = "beginner" | "intermediate" | "advanced";
 export type LabStatus = "coming_soon" | "available" | "maintenance";
 
+export interface LabLevel {
+  difficulty: LabDifficulty;
+  title: string;
+  description: string;
+  objectives: string[];
+  assets: string[];
+  estimatedMinutes: number;
+}
+
 export interface Lab {
   id: LabId;
   slug: LabSlug;
@@ -16,6 +25,7 @@ export interface Lab {
   objectives: string[];
   assets: string[];
   estimatedMinutes: number;
+  levels: readonly LabLevel[];
 }
 
 export const difficultyLabels: Record<LabDifficulty, string> = {
