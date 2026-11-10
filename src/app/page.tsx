@@ -12,7 +12,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow light">ICS LAB / フェーズ1</p>
           <h1 id="home-title">社会インフラを守る。<br />その判断を、ここで学ぶ。</h1>
-          <p className="hero-description">浄水場、変電設備、鉄道運行管理。<br className="desktop-break" />異常の調査から防御・復旧までを学ぶ、<br className="desktop-break" />教育用シミュレーターをつくっています。</p>
+          <p className="hero-description">浄水場、変電設備、鉄道運行管理。<br className="desktop-break" />初級 → 中級 → 上級で進む、<br className="desktop-break" />異常の調査から防御・復旧までを学ぶ教育用シミュレーターです。</p>
           <Link className="button button-white" href="/labs">演習一覧を見る <span aria-hidden="true">→</span></Link>
         </div>
         <div className="hero-outline">

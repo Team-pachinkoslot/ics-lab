@@ -77,9 +77,12 @@ svg { display: block; width: 100%; height: 100%; }
 .lab-card h3 a:hover { color: #205b9d; }
 .card-description { color: var(--muted); font-size: 12px; line-height: 1.9; margin-bottom: 16px; }
 .progress-label { font-size: 10px; letter-spacing: .08em; color: #5d7185; text-transform: uppercase; margin-bottom: 8px; }
-.level-progress { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 18px; }
-.level-step { display: inline-flex; justify-content: center; align-items: center; padding: 8px 4px; border: 1px solid #d7e0ea; border-radius: 999px; background: #f4f7fb; color: #5c7286; font-size: 11px; font-weight: 700; }
-.level-step.is-current { background: #eaf3ff; border-color: #92bbec; color: #1d4d7d; }
+.level-progress { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-bottom: 18px; }
+.level-step { position: relative; display: flex; justify-content: center; align-items: center; min-height: 34px; border: 1px solid #dfe7ef; border-radius: 999px; background: linear-gradient(180deg, #f8fafb 0%, #edf3f8 100%); color: #556a7c; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
+.level-step:nth-child(1) { background: linear-gradient(180deg, #edf6ff 0%, #dfeefc 100%); border-color: #bdd6ef; color: #315d8d; }
+.level-step:nth-child(2) { background: linear-gradient(180deg, #fffaf0 0%, #f7f0dd 100%); border-color: #ead8a7; color: #7a6130; }
+.level-step:nth-child(3) { background: linear-gradient(180deg, #edf7f3 0%, #ddeee6 100%); border-color: #bfd9ca; color: #3b6a54; }
+.level-step span { transform: translateY(-0.5px); }
 .card-bottom { margin-top: auto; padding-top: 17px; border-top: 1px solid #e5e9ee; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
 .card-bottom > span { font-size: 10px; color: #596979; }
 .scope-panel { background: #edf1f5; border: 1px solid #dce3eb; border-radius: 8px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }

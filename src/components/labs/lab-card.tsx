@@ -19,16 +19,16 @@ export function LabCard({ lab }: { lab: Lab }) {
         <h3><Link href={`/labs/${lab.slug}`}>{lab.title}</Link></h3>
         <p className="card-description">{lab.description}</p>
 
-        <div className="progress-label" aria-label="難易度の進行段階">初級 / 中級 / 上級</div>
+        <div className="progress-label" aria-label="難易度の進行段階">進行レベル</div>
         <div className="level-progress" aria-hidden="true">
           {lab.levels.map((level) => (
-            <span
+            <div
               key={`${lab.id}-${level.difficulty}`}
-              className={`level-step ${level.difficulty === lab.difficulty ? "is-current" : ""}`}
+              className="level-step"
               title={difficultyLabels[level.difficulty]}
             >
-              {difficultyLabels[level.difficulty].slice(0, 2)}
-            </span>
+              <span>{difficultyLabels[level.difficulty]}</span>
+            </div>
           ))}
         </div>
 
