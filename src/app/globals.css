@@ -83,12 +83,20 @@ svg { display: block; width: 100%; height: 100%; }
 .level-progress-percent { text-align: right; font-variant-numeric: tabular-nums; }
 .level-progress-row progress { display: block; width: 100%; height: 8px; appearance: none; border: 0; border-radius: 999px; overflow: hidden; background: #e8edf2; }
 .level-progress-row progress::-webkit-progress-bar { border-radius: 999px; background: #e8edf2; }
-.level-progress-row progress::-webkit-progress-value { border-radius: 999px; background: #6b94bb; }
-.level-progress-row progress::-moz-progress-bar { border-radius: 999px; background: #6b94bb; }
-.level-progress-intermediate progress::-webkit-progress-value { background: #b19554; }
-.level-progress-intermediate progress::-moz-progress-bar { background: #b19554; }
-.level-progress-advanced progress::-webkit-progress-value { background: #668d79; }
-.level-progress-advanced progress::-moz-progress-bar { background: #668d79; }
+.level-progress-row progress::-webkit-progress-value { border-radius: 999px; }
+.level-progress-row progress::-moz-progress-bar { border-radius: 999px; }
+.lab-progress-water-01 .level-progress-row progress,
+.lab-progress-water-01 .level-progress-row progress::-webkit-progress-bar { background: repeating-linear-gradient(176deg, #eaf5f8 0 5px, #d9ebef 5px 7px, #eaf5f8 7px 12px); }
+.lab-progress-water-01 .level-progress-row progress::-webkit-progress-value,
+.lab-progress-water-01 .level-progress-row progress::-moz-progress-bar { background: linear-gradient(90deg, #5ca9bf, #80c4cb); }
+.lab-progress-power-01 .level-progress-row progress,
+.lab-progress-power-01 .level-progress-row progress::-webkit-progress-bar { background: repeating-linear-gradient(90deg, #f8f3e6 0 10px, #eadfbe 10px 12px); }
+.lab-progress-power-01 .level-progress-row progress::-webkit-progress-value,
+.lab-progress-power-01 .level-progress-row progress::-moz-progress-bar { background: linear-gradient(90deg, #b18b3f, #d2b45f); }
+.lab-progress-rail-01 .level-progress-row progress,
+.lab-progress-rail-01 .level-progress-row progress::-webkit-progress-bar { background: repeating-linear-gradient(90deg, #edf2f2 0 12px, #d2ddde 12px 14px); }
+.lab-progress-rail-01 .level-progress-row progress::-webkit-progress-value,
+.lab-progress-rail-01 .level-progress-row progress::-moz-progress-bar { background: linear-gradient(90deg, #a94e4c, #c66b60); }
 .card-bottom { margin-top: auto; padding-top: 17px; border-top: 1px solid #e5e9ee; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
 .card-bottom > span { font-size: 10px; color: #596979; }
 .scope-panel { background: #edf1f5; border: 1px solid #dce3eb; border-radius: 8px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }

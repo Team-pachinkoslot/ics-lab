@@ -20,7 +20,7 @@ export function LabCard({ lab }: { lab: Lab }) {
         <p className="card-description">{lab.description}</p>
 
         <div className="progress-label">進行レベル別の演習進捗</div>
-        <div className="level-progress">
+        <div className={`level-progress lab-progress-${lab.id}`}>
           {lab.levels.map((level) => (
             <div key={`${lab.id}-${level.difficulty}`} className={`level-progress-row level-progress-${level.difficulty}`}>
               <span className="level-progress-label">{difficultyLabels[level.difficulty]}</span>
