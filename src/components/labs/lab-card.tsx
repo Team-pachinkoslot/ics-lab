@@ -19,15 +19,13 @@ export function LabCard({ lab }: { lab: Lab }) {
         <h3><Link href={`/labs/${lab.slug}`}>{lab.title}</Link></h3>
         <p className="card-description">{lab.description}</p>
 
-        <div className="progress-label" aria-label="難易度の進行段階">進行レベル</div>
-        <div className="level-progress" aria-hidden="true">
+        <div className="progress-label">進行レベル別の演習進捗</div>
+        <div className="level-progress">
           {lab.levels.map((level) => (
-            <div
-              key={`${lab.id}-${level.difficulty}`}
-              className="level-step"
-              title={difficultyLabels[level.difficulty]}
-            >
-              <span>{difficultyLabels[level.difficulty]}</span>
+            <div key={`${lab.id}-${level.difficulty}`} className={`level-progress-row level-progress-${level.difficulty}`}>
+              <span className="level-progress-label">{difficultyLabels[level.difficulty]}</span>
+              <progress value={0} max={100} aria-label={`${difficultyLabels[level.difficulty]}の演習進捗: 0%`} />
+              <span className="level-progress-percent">0%</span>
             </div>
           ))}
         </div>
