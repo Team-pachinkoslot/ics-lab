@@ -23,10 +23,13 @@ describe("フェーズ1カタログの要件", () => {
     }
   });
 
-  it("各演習は初級・中級・上級の3段階を持つ", () => {
+  it("各実験は指定された難易度の演習だけを持つ", () => {
+    expect(labCatalog.map(({ id, levels }) => [id, levels.map(({ difficulty }) => difficulty)])).toEqual([
+      ["water-01", ["beginner"]],
+      ["power-01", ["intermediate"]],
+      ["rail-01", ["advanced"]],
+    ]);
     for (const lab of labCatalog) {
-      expect(lab.levels).toHaveLength(3);
-      expect(lab.levels.map(({ difficulty }) => difficulty)).toEqual(["beginner", "intermediate", "advanced"]);
       expect(lab.levels.every((level) => level.description.length > 20)).toBe(true);
       expect(lab.levels.every((level) => level.objectives.length > 0)).toBe(true);
       expect(lab.levels.every((level) => level.assets.length > 0)).toBe(true);
