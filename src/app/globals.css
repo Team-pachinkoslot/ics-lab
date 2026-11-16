@@ -33,20 +33,7 @@ svg { display: block; width: 100%; height: 100%; }
 .site-header nav a:hover { background: #f4f6f8; color: var(--foreground); }
 .site-header nav a[aria-current="page"] { background: #eaf1f9; color: #174b81; }
 .local-badge { display: inline-flex; gap: 7px; align-items: center; color: #596979; border: 1px solid var(--line); border-radius: 5px; padding: 5px 9px; font-size: 11px; white-space: nowrap; }
-.local-badge > span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #d97706;
-  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
-  animation: local-status-pulse 1.8s ease-in-out infinite;
-}
-@keyframes local-status-pulse {
-  50% { opacity: .55; box-shadow: 0 0 0 5px rgba(217, 119, 6, 0.08); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .local-badge > span { animation: none; }
-}
+.local-badge > span { width: 6px; height: 6px; border-radius: 50%; background: #728297; }
 .hero { background: #142f49; color: white; border-radius: 12px; padding: 50px 52px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: center; }
 .hero h1 { font-size: clamp(27px, 3.1vw, 39px); line-height: 1.6; letter-spacing: .02em; margin: 15px 0 20px; }
 .eyebrow { color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .12em; margin-bottom: 8px; }
