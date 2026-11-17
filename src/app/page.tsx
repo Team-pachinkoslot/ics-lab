@@ -7,7 +7,7 @@ export default function Home() {
   const labs = getLabs();
 
   return (
-    <div className="container page-stack">
+    <div className="container page-stack home-page">
       <section className="hero" aria-labelledby="home-title">
         <div className="hero-copy">
           <p className="eyebrow light">ICS LAB / フェーズ1</p>

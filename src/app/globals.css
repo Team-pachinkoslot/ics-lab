@@ -54,6 +54,23 @@ svg { display: block; width: 100%; height: 100%; }
 .learning-flow strong { display: block; font-size: 16px; margin-bottom: 2px; }
 .learning-flow p { font-size: 11px; color: #c3d2e0; }
 .outline-footnote { font-size: 10px; color: #b8cbdd; border-top: 1px solid #496077; padding-top: 15px; }
+.home-page .hero { background-color: #092a34; border: 1px solid #194651; color: #f2fbfa; }
+.home-page .eyebrow.light { color: #6ddbc9; }
+.home-page .hero-description { color: #c4dcde; }
+.home-page .button-white { background: #88e4d5; color: #082c34; }
+.home-page .button-white:hover { background: #a7f0e5; }
+.home-page .hero-outline { background: #103a44; border-color: #2a626b; }
+.home-page .outline-tag { color: #9ce7dc; }
+.home-page .learning-flow li { border-color: #2b5961; }
+.home-page .learning-flow li > span { color: #6ddbc9; }
+.home-page .learning-flow p { color: #c1d9db; }
+.home-page .outline-footnote { color: #a9c9cc; border-color: #2b5961; }
+.home-page .scope-panel { background: #dcecea; border-color: #bed8d5; }
+.home-page .scope-panel .eyebrow { color: #14736f; }
+.home-page .scope-panel h2 { color: #153f46; }
+.home-page .scope-panel p:not(.eyebrow) { color: #4a696e; }
+.home-page .scope-panel .button-outline { border-color: #8eb9b5; color: #15565a; }
+body:has(.home-page) { background-color: #eef5f3; }
 .runtime-notice { display: flex; gap: 13px; align-items: flex-start; padding: 18px 22px; border: 1px solid #d6e2ef; border-radius: 7px; background: #eff5fb; color: #2d4c6c; }
 .notice-icon { flex: 0 0 19px; height: 19px; margin-top: 3px; border: 1.5px solid #52769c; border-radius: 50%; text-align: center; font-family: Georgia, serif; font-weight: 700; line-height: 17px; font-size: 12px; }
 .runtime-notice strong { font-size: 13px; font-weight: 600; }
